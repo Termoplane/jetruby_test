@@ -1,0 +1,14 @@
+@mixin mobile
+  @media (max-width: 768px)
+    @content
+  
+.gameBoard
+  display: grid
+  grid-template-columns: repeat(4, auto)
+  justify-content: center
+  grid-gap: 1px
+  height: 100%
+  padding-top: 3rem
+  @include mobile
+    padding-top: 8rem
+    grid-gap: 0
